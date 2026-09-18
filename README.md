@@ -23,14 +23,14 @@
 │                                                            │
 │  Name        : Abhinav Sabu                                │
 │  Role        : Cybersecurity Enthusiast                    │
-│  Focus       : SOC • Blue Team                             │
+│  Focus       : SOC •                                       │
 │                                                            │
-│  Learning    : Security Operations                          │
+│  Learning    : Security Operations                         │
 │                Threat Detection                            │
 │                Digital Forensics                           │
-│                Security Automation                          │
+│                Security Automation                         │
 │                                                            │
-│  Tools       : Linux • Splunk • Wireshark • Python         │
+│  Tools       : Linux • Splunk • Wireshark • Burpsuite      │
 │                                                            │
 │  Goal        : Learn • Build • Contribute                  │
 │                                                            │
