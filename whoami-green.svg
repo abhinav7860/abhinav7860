@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="430" viewBox="0 0 760 430">
+  <rect width="760" height="430" rx="12" fill="#161b22"/>
+  <rect x="18" y="18" width="724" height="394" rx="4" fill="#0d1117" stroke="#30363d" stroke-width="2"/>
+  <g fill="#39d353" font-family="Consolas, 'Liberation Mono', monospace" font-size="16">
+    <text x="38" y="58">┌────────────────────────────────────────────────────────────┐</text>
+    <text x="38" y="84">│                                                            │</text>
+    <text x="38" y="110">│  abhinav@github:~$ whoami                                  │</text>
+    <text x="38" y="136">│                                                            │</text>
+    <text x="38" y="162">│  Name        : Abhinav Sabu                                │</text>
+    <text x="38" y="188">│  Role        : Cybersecurity Enthusiast                    │</text>
+    <text x="38" y="214">│  Focus       : SOC • Blue Team                             │</text>
+    <text x="38" y="240">│                                                            │</text>
+    <text x="38" y="266">│  Learning    : Security Operations                          │</text>
+    <text x="38" y="292">│                Threat Detection                            │</text>
+    <text x="38" y="318">│                Digital Forensics                           │</text>
+    <text x="38" y="344">│                Security Automation                          │</text>
+    <text x="38" y="370">│                                                            │</text>
+    <text x="38" y="396">└────────────────────────────────────────────────────────────┘</text>
+  </g>
+</svg>

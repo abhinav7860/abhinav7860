@@ -14,30 +14,9 @@
 
 </td>
 
-<td width="65%" valign="middle">
+<td width="65%" align="center" valign="middle">
 
-```text
-┌────────────────────────────────────────────────────────────┐
-│                                                            │
-│  abhinav@github:~$ whoami                                  │
-│                                                            │
-│  Name        : Abhinav Sabu                                │
-│  Role        : Cybersecurity Enthusiast                    │
-│  Focus       : SOC •                                       │
-│                                                            │
-│  Learning    : Security Operations                         │
-│                Threat Detection                            │
-│                Digital Forensics                           │
-│                Security Automation                         │
-│                                                            │
-│  Tools       : Linux • Splunk • Wireshark • Burpsuite      │
-│                                                            │
-│  Goal        : Learn • Build • Contribute                  │
-│                                                            │
-│  > Small steps. Safer systems.                             │
-│                                                            │
-└────────────────────────────────────────────────────────────┘
-```
+<img src="./whoami-green.svg" width="100%">
 
 </td>
 </tr>
@@ -94,6 +73,171 @@
 ```text
 Contribution activity
 └── Generated from my GitHub contribution calendar
+```
+
+---
+
+## `~/ the numbers`
+
+<div align="center">
+
+<table>
+<tr>
+
+<td align="center">
+
+### `01`
+
+<b>Cybersecurity</b>
+
+Focused Learning
+
+</td>
+
+<td align="center">
+
+### `02`
+
+<b>Hands-on Labs</b>
+
+Continuous Practice
+
+</td>
+
+<td align="center">
+
+### `03`
+
+<b>Security Projects</b>
+
+Practical Building
+
+</td>
+
+<td align="center">
+
+### `04`
+
+<b>GitHub</b>
+
+Learning in Public
+
+</td>
+
+</tr>
+</table>
+
+</div>
+
+---
+
+## `~/ selected work`
+
+### `01` — Mini EDR
+
+A lightweight endpoint monitoring project built with Python.
+
+```text
+Endpoint
+   │
+   ├── Process Monitoring
+   ├── File Monitoring
+   ├── File Integrity Monitoring
+   └── Detection Rules
+          │
+          ▼
+        Alerts
+```
+
+**Focus:** Python • Endpoint Monitoring • Process Detection • File Monitoring
+
+---
+
+### `02` — Home Vulnerability Scanner
+
+A Python-based scanner for discovering services, grabbing banners, and mapping potential vulnerabilities.
+
+```text
+Target
+   │
+   ▼
+Port Discovery
+   │
+   ▼
+Service Enumeration
+   │
+   ▼
+Banner Grabbing
+   │
+   ▼
+Vulnerability Matching
+   │
+   ▼
+Scan Report
+```
+
+**Focus:** Network Reconnaissance • Service Enumeration • Vulnerability Detection
+
+---
+
+## `~/ lab experience`
+
+<div align="center">
+
+`TryHackMe` • `OverTheWire` • `PortSwigger`
+
+</div>
+
+```text
+Hands-on Security Practice
+│
+├── SOC Fundamentals
+├── SIEM
+├── Splunk
+├── Elastic Stack
+├── Windows Logging
+├── Windows Threat Detection
+├── EDR Concepts
+├── Network Traffic Analysis
+├── Wireshark
+├── Network Discovery Detection
+├── Data Exfiltration Detection
+├── Man-in-the-Middle Detection
+├── Phishing Analysis
+├── Threat Intelligence
+├── Linux
+├── Windows
+├── Web Security
+├── SQL Injection
+├── XSS
+└── CTF / Enumeration
+```
+
+---
+
+## `~/ currently learning`
+
+```text
+SOC / BLUE TEAM
+│
+├── Alert Triage
+├── Log Analysis
+├── Threat Detection
+├── Security Monitoring
+├── Threat Intelligence
+├── EDR
+├── Network Traffic Analysis
+└── Incident Response
+
+
+OFFENSIVE SECURITY
+│
+├── Web Security
+├── Enumeration
+├── SQL Injection
+├── XSS
+├── Burp Suite
+└── CTF Labs
 ```
 
 ---
