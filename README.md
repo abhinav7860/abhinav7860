@@ -4,7 +4,7 @@
 
 ### CYBERSECURITY • SOC • BLUE TEAM
 
-<img src="./abhinav-grainrad.svg" width="520">
+<img src="./abhinav-grainradd.svg" width="520">
 
 <br>
 
