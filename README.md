@@ -4,29 +4,42 @@
 
 ### CYBERSECURITY • SOC • BLUE TEAM
 
-</div>
+<img src="./abhinav-grainrad.svg" width="520">
 
-<table>
-<tr>
-<td width="35%" align="center" valign="middle">
-
-<img src="./abhinav-grainrad.svg" width="280">
-
-</td>
-
-<td width="65%" align="center" valign="middle">
-
-<img src="./whoami-green.svg" width="100%">
-
-</td>
-</tr>
-</table>
-
-<div align="center">
+<br>
 
 `Learning cybersecurity through hands-on labs, security projects, and continuous investigation.`
 
 </div>
+
+---
+
+## `~/ whoami`
+
+```text
+┌──────────────────────────────────────────────────────────────┐
+│                                                              │
+│  $ whoami                                                    │
+│                                                              │
+│  Abhinav Sabu                                                │
+│                                                              │
+│  Cybersecurity enthusiast focused on SOC and Blue Team       │
+│  security operations, threat detection, investigation,        │
+│  and practical security engineering.                         │
+│                                                              │
+│  I learn by working with real tools, building small          │
+│  security projects, solving labs, and documenting what       │
+│  I discover along the way.                                   │
+│                                                              │
+│  Current direction                                           │
+│  ├── SOC / Blue Team                                         │
+│  ├── Threat Detection                                        │
+│  ├── Security Monitoring                                     │
+│  ├── Threat Intelligence                                     │
+│  └── Incident Investigation                                  │
+│                                                              │
+└──────────────────────────────────────────────────────────────┘
+```
 
 ---
 
@@ -51,7 +64,7 @@
 <img src="https://img.shields.io/badge/Elastic-0d1117?style=for-the-badge&logo=elastic&logoColor=FEC514">
 </p>
 
-### `Systems`
+### `Systems & Development`
 
 <p>
 <img src="https://img.shields.io/badge/Linux-0d1117?style=for-the-badge&logo=linux&logoColor=FCC624">
@@ -59,6 +72,16 @@
 <img src="https://img.shields.io/badge/Git-0d1117?style=for-the-badge&logo=git&logoColor=F05032">
 <img src="https://img.shields.io/badge/GitHub-0d1117?style=for-the-badge&logo=github&logoColor=ffffff">
 </p>
+
+---
+
+## `~/ skill radar`
+
+<div align="center">
+
+<img src="./skill-radar.svg" width="760">
+
+</div>
 
 ---
 
@@ -83,7 +106,6 @@ Contribution activity
 
 <table>
 <tr>
-
 <td align="center">
 
 ### `01`
@@ -93,7 +115,6 @@ Contribution activity
 Focused Learning
 
 </td>
-
 <td align="center">
 
 ### `02`
@@ -103,7 +124,6 @@ Focused Learning
 Continuous Practice
 
 </td>
-
 <td align="center">
 
 ### `03`
@@ -113,7 +133,6 @@ Continuous Practice
 Practical Building
 
 </td>
-
 <td align="center">
 
 ### `04`
@@ -123,7 +142,6 @@ Practical Building
 Learning in Public
 
 </td>
-
 </tr>
 </table>
 
@@ -135,7 +153,7 @@ Learning in Public
 
 ### `01` — Mini EDR
 
-A lightweight endpoint monitoring project built with Python.
+A lightweight endpoint detection and monitoring project built with Python.
 
 ```text
 Endpoint
@@ -155,7 +173,7 @@ Endpoint
 
 ### `02` — Home Vulnerability Scanner
 
-A Python-based scanner for discovering services, grabbing banners, and mapping potential vulnerabilities.
+A Python-based vulnerability scanner designed to discover services, grab banners, map services, and identify potential vulnerabilities.
 
 ```text
 Target
@@ -176,7 +194,7 @@ Vulnerability Matching
 Scan Report
 ```
 
-**Focus:** Network Reconnaissance • Service Enumeration • Vulnerability Detection
+**Focus:** Nmap • Network Reconnaissance • Service Enumeration • Vulnerability Detection
 
 ---
 
@@ -283,6 +301,13 @@ Repeat
 
 <div align="center">
 
-`Hack • Learn • Build • Repeat`
+```text
+01001000 01100001 01100011 01101011
+01001100 01100101 01100001 01110010 01101110
+01000010 01110101 01101001 01101100 01100100
+01010010 01100101 01110000 01100101 01100001 01110100
+```
+
+### `Hack • Learn • Build • Repeat`
 
 </div>
