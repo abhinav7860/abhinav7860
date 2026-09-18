@@ -12,9 +12,9 @@ lines = [
     ("Name", "Abhinav Sabu"),
     ("Focus", "Cybersecurity"),
     ("Stack", "Python • Linux • Networking"),
-    ("Tools", "Nmap • Wireshark • Git"),
+    ("Tools", "Nmap • Wireshark • Burp Suite • Metasploit"),
     ("Labs", "TryHackMe • OverTheWire"),
-    ("Learning", "OSINT • Web Security"),
+    ("Learning", "SOC • Web Security • Pentesting • OSINT"),
     ("Currently", "Cybersecurity Journey"),
 ]
 

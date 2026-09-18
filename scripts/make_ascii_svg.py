@@ -1,7 +1,7 @@
 from pathlib import Path
 
 import numpy as np
-from PIL import Image, ImageEnhance, ImageOps
+from PIL import Image, ImageEnhance
 
 
 INPUT = Path("source-prepped.png")
@@ -18,7 +18,6 @@ FONT_SIZE = 8
 CHAR_WIDTH = 5.0
 LINE_HEIGHT = 9
 
-TEXT_COLOR = "#c9d1d9"
 BACKGROUND = "#0d1117"
 
 # Bright → dark
@@ -26,6 +25,105 @@ RAMP = " .:-=+*#%@"
 
 # How much white background to ignore
 BACKGROUND_THRESHOLD = 245
+
+
+# ============================================================
+# COLOR PALETTE
+# ============================================================
+
+# Left → right / top → bottom
+GRADIENT_COLORS = [
+    "#00e5ff",   # Cyan
+    "#2979ff",   # Blue
+    "#7c4dff",   # Violet
+    "#e040fb",   # Pink
+    "#ff4081",   # Magenta
+    "#ff8a3d",   # Orange
+]
+
+
+# ============================================================
+# COLOR FUNCTIONS
+# ============================================================
+
+def hex_to_rgb(hex_color):
+    """Convert #RRGGBB into an RGB tuple."""
+
+    hex_color = hex_color.lstrip("#")
+
+    return (
+        int(hex_color[0:2], 16),
+        int(hex_color[2:4], 16),
+        int(hex_color[4:6], 16)
+    )
+
+
+def rgb_to_hex(rgb):
+    """Convert RGB tuple into #RRGGBB."""
+
+    return "#{:02x}{:02x}{:02x}".format(
+        int(rgb[0]),
+        int(rgb[1]),
+        int(rgb[2])
+    )
+
+
+def interpolate_color(color1, color2, amount):
+    """Blend two RGB colors."""
+
+    return tuple(
+        color1[i] +
+        (color2[i] - color1[i]) * amount
+        for i in range(3)
+    )
+
+
+def get_gradient_color(position):
+    """
+    Get a color from the complete gradient.
+
+    position:
+        0.0 = first color
+        1.0 = last color
+    """
+
+    position = max(
+        0.0,
+        min(
+            1.0,
+            position
+        )
+    )
+
+    colors = [
+        hex_to_rgb(color)
+        for color in GRADIENT_COLORS
+    ]
+
+    scaled = (
+        position *
+        (len(colors) - 1)
+    )
+
+    index = int(scaled)
+
+    if index >= len(colors) - 1:
+        return rgb_to_hex(
+            colors[-1]
+        )
+
+    local_position = (
+        scaled -
+        index
+    )
+
+    color = interpolate_color(
+        colors[index],
+        colors[index + 1],
+        local_position
+    )
+
+    return rgb_to_hex(color)
 
 
 # ============================================================
@@ -40,11 +138,15 @@ def find_subject_box(image):
 
     array = np.array(image)
 
-    mask = array < BACKGROUND_THRESHOLD
+    mask = (
+        array <
+        BACKGROUND_THRESHOLD
+    )
 
     ys, xs = np.where(mask)
 
     if len(xs) == 0:
+
         return (
             0,
             0,
@@ -105,9 +207,6 @@ def crop_portrait(image):
     # --------------------------------------------------------
     # Keep the top of the portrait
     # and reduce excessive jacket area.
-    #
-    # Your photo has a lot of jacket below the face.
-    # We only keep approximately the upper 72%.
     # --------------------------------------------------------
 
     useful_height = int(
@@ -153,7 +252,9 @@ def image_to_ascii():
             f"{INPUT} not found."
         )
 
-    print("Loading prepared image...")
+    print(
+        "Loading prepared image..."
+    )
 
     image = Image.open(
         INPUT
@@ -163,7 +264,9 @@ def image_to_ascii():
     # Crop around the person
     # --------------------------------------------------------
 
-    print("Cropping portrait...")
+    print(
+        "Cropping portrait..."
+    )
 
     image = crop_portrait(
         image
@@ -182,13 +285,16 @@ def image_to_ascii():
         image
     ).enhance(1.7)
 
+    # --------------------------------------------------------
     # Slight sharpening
+    # --------------------------------------------------------
+
     image = ImageEnhance.Sharpness(
         image
     ).enhance(1.4)
 
     # --------------------------------------------------------
-    # Calculate ASCII rows.
+    # Calculate ASCII rows
     #
     # Characters are taller than they are wide,
     # so compensate with ~0.48.
@@ -207,7 +313,10 @@ def image_to_ascii():
 
     rows = max(
         30,
-        min(rows, 65)
+        min(
+            rows,
+            65
+        )
     )
 
     print(
@@ -228,10 +337,7 @@ def image_to_ascii():
     )
 
     # --------------------------------------------------------
-    # Slight gamma correction.
-    #
-    # This helps preserve facial details instead of
-    # turning the whole face into one dark block.
+    # Gamma correction
     # --------------------------------------------------------
 
     array = np.array(
@@ -302,11 +408,15 @@ def create_svg(lines):
     rows = len(lines)
 
     width = int(
-        COLS * CHAR_WIDTH + 40
+        COLS *
+        CHAR_WIDTH +
+        40
     )
 
     height = int(
-        rows * LINE_HEIGHT + 30
+        rows *
+        LINE_HEIGHT +
+        30
     )
 
     svg = f'''<svg
@@ -322,31 +432,58 @@ height="100%"
 rx="12"
 fill="{BACKGROUND}"/>
 
+<rect
+x="1"
+y="1"
+width="{width - 2}"
+height="{height - 2}"
+rx="12"
+fill="none"
+stroke="#30363d"
+stroke-width="1"/>
+
 <style>
 
 .ascii {{
-    font-family: "Courier New", monospace;
-    font-size: {FONT_SIZE}px;
-    font-weight: 400;
-    fill: {TEXT_COLOR};
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size:
+        {FONT_SIZE}px;
+
+    font-weight:
+        400;
 }}
 
 .row {{
-    opacity: 0;
+
+    opacity:
+        0;
+
     animation:
-        typeRow 0.28s ease-out forwards;
+        typeRow
+        0.28s
+        ease-out
+        forwards;
 }}
 
 @keyframes typeRow {{
 
     from {{
-        opacity: 0;
+
+        opacity:
+            0;
+
         transform:
             translateX(-12px);
     }}
 
     to {{
-        opacity: 1;
+
+        opacity:
+            1;
+
         transform:
             translateX(0);
     }}
@@ -368,14 +505,38 @@ fill="{BACKGROUND}"/>
 
         y = (
             20 +
-            row_number * LINE_HEIGHT
+            row_number *
+            LINE_HEIGHT
         )
 
         delay = (
-            row_number * 0.045
+            row_number *
+            0.045
         )
 
+        # ----------------------------------------------------
+        # Calculate gradient color for this row
+        # ----------------------------------------------------
+
+        if rows <= 1:
+
+            position = 0
+
+        else:
+
+            position = (
+                row_number /
+                (rows - 1)
+            )
+
+        color = get_gradient_color(
+            position
+        )
+
+        # ----------------------------------------------------
         # XML escaping
+        # ----------------------------------------------------
+
         line = (
             line
             .replace(
@@ -392,11 +553,16 @@ fill="{BACKGROUND}"/>
             )
         )
 
+        # ----------------------------------------------------
+        # Write the actual color directly into SVG
+        # ----------------------------------------------------
+
         svg += f'''
 <text
 x="20"
 y="{y}"
 class="row"
+fill="{color}"
 xml:space="preserve"
 style="animation-delay:{delay:.3f}s">{line}</text>
 '''
@@ -419,7 +585,7 @@ def main():
     lines = image_to_ascii()
 
     print(
-        "Generating SVG..."
+        "Generating colorful SVG..."
     )
 
     svg = create_svg(
@@ -444,4 +610,5 @@ def main():
 
 
 if __name__ == "__main__":
+
     main()
