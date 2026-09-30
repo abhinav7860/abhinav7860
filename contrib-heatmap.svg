@@ -4137,6 +4137,17 @@
             style="animation-delay:1.325s">
         </rect>
         
+        <rect
+            class="cell"
+            x="768"
+            y="73"
+            width="11"
+            height="11"
+            rx="3"
+            fill="#161b22"
+            style="animation-delay:1.350s">
+        </rect>
+        
     <text
         x="40"
         y="168"
